@@ -34,4 +34,4 @@ The unverified role can be used to make a channel visible in which the message i
 The EmailBot role has to be higher in the role hierarchy then the verified and unverified role else
 -> `Cant find roles. Please contact the admin!` error
 
-![img.png](https://raw.githubusercontent.com/lkaesberg/EmailBot/main/images/bothierarchy.png)
+![img.png](https://raw.githubusercontent.com/psharma04/Overpass/main/images/bothierarchy.png)

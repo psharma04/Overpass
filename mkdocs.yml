@@ -4,8 +4,8 @@ theme:
   name: material
   icon:
     repo: fontawesome/brands/github
-  logo: https://raw.githubusercontent.com/lkaesberg/EmailBot/main/images/emailbot-border.png
-  favicon: https://raw.githubusercontent.com/lkaesberg/EmailBot/main/images/emailbot.png
+  logo: https://raw.githubusercontent.com/psharma04/Overpass/main/images/emailbot-border.png
+  favicon: https://raw.githubusercontent.com/psharma04/Overpass/main/images/emailbot.png
   palette:
     scheme: default
     primary: black

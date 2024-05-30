@@ -15,9 +15,9 @@
   <a href="https://github.com/lkaesberg/EmailVerify/stargazers"><img src="https://img.shields.io/github/stars/lkaesberg/EmailVerify?style=social" alt="GitHub stars"></a>
 </p>
     <p>
-    <a href="https://github.com/lkaesberg/EmailBot/issues">Report Bug</a>
+    <a href="https://github.com/psharma04/Overpass/issues">Report Bug</a>
     ·
-    <a href="https://github.com/lkaesberg/EmailBot/issues">Request Feature</a>
+    <a href="https://github.com/psharma04/Overpass/issues">Request Feature</a>
     </p>
     <a href="https://emailbot.larskaesberg.de/">Website</a>
   </p>
