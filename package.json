@@ -17,8 +17,7 @@
     "express": "^4.19.2",
     "nodemailer": "^6.9.13",
     "nodemailer-smtp-transport": "^2.7.4",
-    "sqlite3": "^5.1.7",
-    "topgg-autoposter": "^2.0.2"
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "process": "^0.11.10"

@@ -49,7 +49,7 @@ module.exports = async function (message, bot, userGuilds, userCodes, userTimeou
                         console.log(e)
                     }
                     try {
-                        await member.send("You got unverified on " + userGuilds.get(message.author.id).name + " because somebody else used that email!")
+                        await member.send("Your account on " + userGuilds.get(message.author.id).name + "has been unverified because somebody else is using that email. If you believe this is an error, change your UNSW account password IMMEDIATELY (https://idm.unsw.edu.au) and contact the " + userGuilds.get(message.author.id).name + " server admins.")
                     } catch {
                     }
                 }

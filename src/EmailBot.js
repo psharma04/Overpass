@@ -7,7 +7,7 @@ const fs = require("fs");
 const {getLocale, defaultLanguage} = require('./Language')
 require("./database/ServerSettings");
 const ServerStatsAPI = require("./api/ServerStatsAPI");
-const topggAPI = require("./api/TopGG")
+
 const MailSender = require("./mail/MailSender")
 const messageCreate = require("./bot/messageCreate")
 const sendVerifyMessage = require("./bot/sendVerifyMessage")
@@ -19,7 +19,6 @@ const bot = new Discord.Client({intents: [Discord.GatewayIntentBits.DirectMessag
 
 const serverStatsAPI = new ServerStatsAPI(bot)
 
-topggAPI(bot)
 
 let emailNotify = true
 
