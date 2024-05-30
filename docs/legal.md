@@ -1,6 +1,6 @@
 # Legal
 
-The Terms of Service and Privacy Policy for the Discord EmailBot
+The Terms of Service and Privacy Policy for the Overpass Discord bot.
 
 ## Terms of Service
 
@@ -12,15 +12,17 @@ The privilege of using and inviting this bot can be revoked for any server or us
 Policy of this Bot or the [Terms of Service](https://discord.com/terms), [Privacy Policy](https://discord.com/privacy)
 or [Community Guidlines](https://discord.com/guidelines) of Discord gets violated.
 
-The bot is allowed to collect data as described in [Privacy Policy](#privacy-policy)
+The bot is allowed to collect data as described in [Privacy Policy](#privacy-policy).
 
 ### Intended Age
 
-Users under the minimal age of Discords [Terms of Service](https://discord.com/terms) are not allowed to use this bot.
+Users under the minimal age of Discord's [Terms of Service](https://discord.com/terms) are not allowed to use this bot.
 
 ### Affiliation
 
 This Bot is not affiliated with, supported or made by Discord.
+
+This bot is also not affiliated or maintained by Arc, UNSW, or any societies who may be using it unless specified otherwise.
 
 ### Liability
 
@@ -31,18 +33,15 @@ Bot from its own servers.
 
 ### Contact
 
-Discord Server: [Official Support Discord](https://discord.com/invite/fEBSHUQXu2)
-
-Email: <a href="mailto:emailbot@larskaesberg.de">Send Email</a>
+Email: <a href="mailto:overpass@pks.ai">Send Email</a>
 
 ## Privacy Policy
 
 ### Data Usage
 
-The bot uses the stored data to verify that no emails get used multiple times. Everything else is settings data for the
-server.
+The bot uses the stored data to verify that no emails get used multiple times. Everything else is settings data for individual servers.
 
-The data is only used by the EmailBot and won't be shared with any 3rd party services.
+The data is only used by the bot and won't be shared with any 3rd party services.
 
 ### Stored Information
 
@@ -66,7 +65,7 @@ Following data gets stored from the bot:
 #### User
 
 - `userid` user id
-- `email` hashed version of the email address
+- `email` an MD5 hashed version of the email address
 - `guildid` server id
 
 ### Removal of Data
@@ -79,4 +78,4 @@ When the bot gets removed from the server all the data is removed automatically.
 
 #### User
 
-The user can remove its data by using `/delete_user_data`
+The user can remove their own data by using `/delete_user_data`

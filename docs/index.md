@@ -2,6 +2,9 @@
 
 > A simple Discord verification bot that doesn't involve trusting strangers with your password.
 
+* TOC
+{:toc}
+
 ## What is this?
 
 Overpass is a discord bot designed to verify that a student is who they say they are. It relies on some simple principles:
