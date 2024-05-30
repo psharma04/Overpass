@@ -1,17 +1,20 @@
 # Overpass for UNSW
 
 > A simple Discord verification bot that doesn't involve trusting strangers with your password.
+---
 
 * TOC
 {:toc}
 
+---
+
 ## What is this?
 
-Overpass is a discord bot designed to verify that a student is who they say they are. It relies on some simple principles:
+Overpass is a Discord bot designed to verify that a student is who they say they are. It relies on some simple principles:
 
 1. A student's zID is unique,
-2. The person who owns a specific zID also has access to the email `zID@ad.unsw.edu.au`
-3. No-one else has access to that zID's email inbox
+2. The person who owns a specific zID also has access to the email `zID@ad.unsw.edu.au`,
+3. No-one else has access to that zID's email inbox,
 4. You don't (and shouldn't) trust strangers with your password.
 
 ## How does it work?
