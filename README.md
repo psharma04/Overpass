@@ -99,3 +99,9 @@ Run `/delete_server_data`. The bot will nuke itself and disconnect from your ser
 ### I need help with some other task
 
 If `/help` doesn't give you the information you need, DM me on Discord.
+
+### I want to give you money
+
+If you want to fund this project, [support the upstream maintainer instead](https://patreon.com/emailbotdiscord), as I rely on his code to keep this bot running. I promise I don't need or want your money.
+
+If you want to give it to me anyway, I instead ask that you [make a contribution to the independent student paper Noise](https://noiseatunsw.com/donate), which I've spent a significant amount of effort writing both code and articles for.

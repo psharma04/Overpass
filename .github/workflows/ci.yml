@@ -26,8 +26,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/lkaesberg/emailverify:latest
-            ghcr.io/lkaesberg/emailverify:${{ github.ref_name }}
+            ghcr.io/psharma04/Overpass:latest
+            ghcr.io/psharma04/Overpass:${{ github.ref_name }}
   pages:
     runs-on: ubuntu-latest
     steps:

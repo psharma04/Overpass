@@ -3,7 +3,7 @@ name: New Language Template
 about: Create a new translation for the EmailBot
 title: "[LANGUAGE]"
 labels: enhancement
-assignees: lkaesberg
+assignees: psharma04
 
 ---
 
