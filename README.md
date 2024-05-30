@@ -1,155 +1,101 @@
-<!--
-*** Build using the Best-README-Template.
--->
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-<a><img src="images/emailbot.png" alt="EmailBot" width="128" height="128" title="EmailBot"></a>
-  <h3 align="center">Discord Email Verify</h3>
-  <p align="center">
-    A Email Verification Bot<br />
-    <p align="center">
-  <a href="https://github.com/lkaesberg/EmailVerify/actions"><img src="https://github.com/lkaesberg/EmailVerify/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
-  <a href="https://github.com/lkaesberg/EmailVerify/blob/main/LICENSE"><img src="https://img.shields.io/github/license/lkaesberg/EmailVerify" alt="License"></a>
-  <a href="https://github.com/lkaesberg/EmailVerify/network/members"><img src="https://img.shields.io/github/forks/lkaesberg/EmailVerify?style=social" alt="GitHub forks"></a>
-  <a href="https://github.com/lkaesberg/EmailVerify/stargazers"><img src="https://img.shields.io/github/stars/lkaesberg/EmailVerify?style=social" alt="GitHub stars"></a>
-</p>
-    <p>
-    <a href="https://github.com/psharma04/Overpass/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/psharma04/Overpass/issues">Request Feature</a>
-    </p>
-    <a href="https://emailbot.larskaesberg.de/">Website</a>
-  </p>
-</p>
+# Overpass for UNSW
 
+> A simple Discord verification bot that doesn't involve trusting strangers with your password.
 
+## What is this?
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#built-with">Built With</a>
-    </li>
-    <li>
-        <a href="#usage">Usage</a>
-    </li>
-    <li>
-        <a href="#contributors">Contributors</a>
-    </li>
-    <li>
-        <a href="#self-host">Self Host</a>
-    </li>
-  </ol>
+Overpass is a discord bot designed to verify that a student is who they say they are. It relies on some simple principles:
 
-</details>
+1. A student's zID is unique,
+2. The person who owns a specific zID also has access to the email `zID@ad.unsw.edu.au`
+3. No-one else has access to that zID's email inbox
+4. You don't (and shouldn't) trust strangers with your password.
 
-## Built With
+## How does it work?
 
-<div style="display: -ms-flexbox;     display: -webkit-flex;     display: flex;     -webkit-flex-direction: row;     -ms-flex-direction: row;     flex-direction: row;     -webkit-flex-wrap: wrap;     -ms-flex-wrap: wrap;     flex-wrap: wrap;     -webkit-justify-content: space-around;     -ms-flex-pack: distribute;     justify-content: space-around;     -webkit-align-content: stretch;     -ms-flex-line-pack: stretch;     align-content: stretch;     -webkit-align-items: flex-start;     -ms-flex-align: start;     align-items: flex-start;">
-<a href="https://nodejs.org/en/"><img src="https://chris-noring.gallerycdn.vsassets.io/extensions/chris-noring/node-snippets/1.3.2/1606066290744/Microsoft.VisualStudio.Services.Icons.Default" alt="NodeJS" width="64" height="64" title="NodeJS"></a>
-<a href="https://www.npmjs.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1280px-Npm-logo.svg.png" alt="npm" width="164" height="64" title="npm"></a>
-<a href="https://discord.js.org/#/"><img src="https://discordjs.guide/meta-image.png" alt="DiscordJS" width="64" height="64" title="DiscordJS"></a>
-<a href="https://nodemailer.com/about/"><img src="https://nodemailer.com/nm_logo_200x136.png" alt="Nodemailer" width="94" height="64" title="Nodemailer"></a>
-</div>
+1. A server admin (usually a society exec or course convenor) sets up the bot in their server
+2. Someone joins the server
+3. The bot assigns them an "Unverified" role, stopping them from accessing anything but the `#verify` channel
+4. They click the button in the channel and receive a DM from the bot
+5. They give the bot their UNSW email (either zID@ad.unsw.edu.au)
+6. The bot sends them an email with a 6 digit code
+7. They reply to the bot with the code from their email
+8. The bot assigns them a "Verified" role in the discord server, and posts their zID in a channel that's only accessible to the server admins.
 
-### Description
+## What makes this different from Drawbridge?
 
-This bot is able to verify that a discord user owns an email with a certain domain (i.e. verify name@uni.edu mails).
-This can be useful when there is some sensitive data on the server which shouldn't be accessed by everyone. To verify,
-the user just has to add a reaction to a specified message and the bot will send a direct message which asks for the
-email address. A code will be sent to the email which will grant the verified role when send to the bot.
+[Drawbridge](https://web.cse.unsw.edu.au/~apps/discord/) is the Arc-approved version of this bot, developed by Tom (a former CSESoc exec/CSE Course Convenor) and maintained by Dylan from CSE. However, I consider Drawbridge to have a major design flaw:
 
-## Usage
+> "Your zPass will not be stored. I don't want your zPass, I like my own one."
 
-### Invite Bot
+Unfortunately, Drawbridge is currently closed-source, meaning no-one can actually verify that your password isn't being stored by the operators. Additionally, your password is sent in plaintext to the server. I've written a more technical explanation of Why That's Bad (ironically, based on stuff I learned in a CSE course) further down the page for those who are more technically inclined.
 
-Use this link to invite the bot to your server:
+Even if you don't trust me, the worst case is that I know your zID and what UNSW discord servers you've joined. Unlike Drawbridge, Overpass never has a risk of giving me, server admins, the bot or any webpage your password, making it (at least to me) significantly safer to use. However, it still successfully performs the task of logging a student's zID for the admins of a discord server, which is the entire purpose of both bots.
 
-https://discord.com/api/oauth2/authorize?client_id=895056197789564969&permissions=268504128&scope=bot%20applications.commands
+Additionally, a student wanting to remove their data is as simple as asking the server admins to run the `/delete_user_data` command for their Discord username.
 
-### Commands
+## I'm a server admin. How do I set it up?
 
-|         Commands          |            Arguments            |                                                                                                Usage                                                                                                |
-|:-------------------------:|:-------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|          `/help`          |                                 |                                                                               get instructions on how to use the bot                                                                                |
-|         `/verify`         |                                 |                                                                                        verify on the server                                                                                         |
-|         `/status`         |              **-**              |                                                                        returns whether the bot is properly configured or not                                                                        |
-|         `/domains`         |        **(domain name)**        |                                                         **()** -> returns registered domains<br>**(domain name)** -> register given domain                                                          |
-|      `/removedomain`      |         **domain name**         |                                                                                      remove registered domain                                                                                       |
-|         `/button`         | **channel,message, buttontext** |                                                                  creates a button in the channel with the message and button text                                                                   |
-|        `/message`         |       **channel,message**       |                                                sends a message to the channel to which the user can add a reaction to start the verification process                                                |
-|     `/verifymessage`      |          **(message)**          |                                                     **()** -> resets to default verify message <br> **(message)** -> set custom verify message                                                      |
-|      `/verifiedrole`      |    **(verified role name)**     |                                      **()** -> returns the name of the verified role <br> **(verified role name)** -> set the role name for the verified role                                       |
-|     `/unverifiedrole`     |   **(unverified role name)**    | **()** -> returns the name of the unverified role <br> **(unverified rolename)** -> set the role name for the unverified role <br> **(current unverified rolename)** -> deactivates unverified role |
-|        `/language`        |          **language**           |                                                                               set language for the user interactions                                                                                |
-| `/add_unverified_on_join` |           **enable**            |                                                          **(enable/disable)** -> automatically adds the unverified role to every new user                                                           |
-|     `/verify_on_join`     |           **enable**            |                                                                **(enable/disable)** -> automatically asks every new member to verify                                                                |
-|    `/delete_user_data`    |                                 |                                                                                  delete all the data from the user                                                                                  |
-|   `/delete_server_data`   |                                 |                                                                                 delete all the data from the server                                                                                 |
+Unfortunately, the setup is a little bit involved. If you're having trouble, feel free to send me a DM on Discord.
 
-react := react to the message with an emoji
+1. Create 2 new channels on your server - I'd recommend calling them `#verify` and `#registration-logs` or similar.
+2. Create 2 new roles - I'd call them `Verified` and `Unverified`.
+3. Set the permissions for the roles as follows:
+   1. `Unverified` should have all permissions disabled for every channel except `#verify`
+   2. `Verified` should have all permissions disabled for the channel `#verify`
+   3. `#registration-logs` should be set up to only be visible to moderators. You can use the "Private Channels" function for this.
+4. [Invite the bot](https://discord.com/oauth2/authorize?client_id=1031151331190263848&permissions=268504128&scope=bot%20applications.commands) to your server.
+5. Run all of the following commands:
 
-**The commands can only be used by an administrator**
+| Command (I would copy-paste this)                            | Expected response from the bot                        | Notes                                                        |
+| ------------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------ |
+| `/unverifiedrole @Unverified`                                | "Unverified role changed to unverified"               | Substitute `@Unverified` for your Unverified user role       |
+| `/verifiedrole @Verified`                                    | "Verified role changed to verified"                   | Substitute `@Verified` for your Verified user role           |
+| `/add_unverified_on_join True`                               | "Enabled auto add unverified role!"                   |                                                              |
+| [For UNSW staff-run servers or any other case where Arc wouldn't need access]`/domains unsw.edu.au,ad.unsw.edu.au` | "Added @unsw.edu.au,@ad.unsw.edu.au"                  | MAKE SURE THIS IS EXACTLY THE SAME AND THAT BOTH DOMAINS ARE INCLUDED IN THE BOT'S REPLY. **DO NOT ADD** `student.unsw.edu.au` |
+| [For clubs/servers where Arc staff need access]`/domains unsw.edu.au,ad.unsw.edu.au,arc.unsw.edu.au` | "Added @unsw.edu.au,@arc.unsw.edu.au,@ad.unsw.edu.au" | MAKE SURE THIS IS EXACTLY THE SAME AND THAT ALL 3 DOMAINS ARE INCLUDED. **DO NOT ADD** `student.unsw.edu.au` |
+| `/set_log_channel #registration-logs`                        | "Modified log channel"                                | Substitute `#registration-logs` for your zID log channel. MAKE SURE THIS IS ONLY ACCESSIBLE TO MODERATORS. |
+| `/verifymessage This Discord server is operated by <SOCIETY>. By registering, you agree to comply with the server's rules, as well as the UNSW Code of Conduct. Please enter your UNSW email address (usually z1234567@ad.unsw.edu.au). You will get a 6 digit code emailed to your UNSW email within the next few minutes, please send that code as a DM reply to this bot.` | "Modified verify message"                             | Add any legal text you need to the message, and replace `<SOCIETY>` with whatever group is responsible for the server. |
 
-The unverified role can be used to make a channel visible in which the message is located
+6. Copy-paste your server rules into `#verify`.
+7. Make sure only moderators have the "Send Messages" Permission for `#verify`.
+8. Run the `/button` command with the parameters below:
 
-The EmailBot role has to be higher in the role hierarchy then the verified and unverified role else
--> `Cant find roles. Please contact the admin!` error
+| Channel   | Button Text          | Message                                                      |
+| --------- | -------------------- | ------------------------------------------------------------ |
+| `#verify` | Click here to verify | This bot will verify your zID. Go to https://overpass.unsw.bot for more information on how it works. |
 
-![img.png](images/bothierarchy.png)
+​		It should respond "Button created", and you should see the following message in the `#verify` channel:
 
-## Contributors
+![CleanShot 2024-05-29 at 22.26.06@2x](https://raw.githubusercontent.com/psharma04/Overpass/main/images/example-button.png)
 
-### Developer
+9. Run `/status` to confirm that you've set the bot up properly. If there are any unexpected differences from the following screenshot, you might have dome something wrong.
 
-- Lars Kaesberg
+![](https://raw.githubusercontent.com/psharma04/Overpass/main/images/expected-config.png)
 
-### Translation
+10. [OPTIONAL] Run `/verify` and verify yourself to test that it works with your account before sharing the server with students/members.
+11. Done! You should be good to share the server with new members and have them verify when they join.
 
-- Lars Kaesberg (English, German)
-- gus2131 (Spanish)
-- kploskonka (Polish)
-- Norma1Name (Hebrew)
-- iplayagain (Korean)
-- Charles Van (France)
-- EmreSoftware (Turkish)
+## Common tasks
 
-To add more languages please create an issue with the translation file. [Template](language/english.json)
+### I need to remove a student's data from my server
 
-## Self Host
+All you need to do is find their discord username in `#verification-logs` and delete the corresponding message from the bot!
 
-Node version: 16.15.0
+### I need to ban a zID from my server
 
-To install the bot execute following commands:
-### Download the Bot
-```
-git clone https://github.com/lkaesberg/EmailVerify.git
-cd emailverify
-```
-### Create Config File
-```
-nano config/config.json
-```
-```
-{
-  "token": "<Discord Bot Token>",
-  "clientId": "<Discord Bot Client ID>",
-  "email": "<Email Address>",
-  "username": "<Mail Server Username>",
-  "password": "<Email Password>",
-  "smtpHost": "<SMTP Server>",
-  "isGoogle": <true/false>,
-  "topggToken": "<optional: TopGG Token (remove field when empty)>"
-}
-```
-### Install and Start the Bot
-```
-npm install
-npm start
-```
-### Usage
-Type "email" in the console to see debugging messages for email errors.
+Run `/blacklist zID@unsw.edu.au, zID@ad.unsw.edu.au`. 
 
-If you are using a Gmail account you have to create an App password and use that instead of your password.
+### I want to add/remove a domain
+
+Simply run `/domains domain.tld` for each new domain, or `/removedomains domain.tld` for each domain you want to remove.
+
+I'd recommend running `/domains` after either of those commands to make sure the new list is correct for your server.
+
+### I want to remove the bot entirely
+
+Run `/delete_server_data`. The bot will nuke itself and disconnect from your server (you'll have to do all the setup again if you want to re-add it).
+
+### I need help with some other task
+
+If `/help` doesn't give you the information you need, DM me on Discord.
