@@ -42,7 +42,7 @@ Additionally, a student wanting to remove their data is as simple as asking the 
 
 ## I'm a server admin. How do I set it up?
 
-Unfortunately, the setup is a little bit involved. If you're having trouble, feel free to send me a DM on Discord.
+Here's some basically copy-paste instructions. I've assumed you're familiar with the basics of setting up a Discord server, but if you're having trouble, feel free to send me a [DM on Discord](https://discord.com/channels/@me/336292647427637249).
 
 1. Create 2 new channels on your server - I'd recommend calling them `#verify` and `#registration-logs` or similar.
 2. Create 2 new roles - I'd call them `Verified` and `Unverified`.
@@ -102,6 +102,21 @@ I'd recommend running `/domains` after either of those commands to make sure the
 
 Run `/delete_server_data`. The bot will nuke itself and disconnect from your server (you'll have to do all the setup again if you want to re-add it).
 
+### I want to allow non-UNSW students to access my server
+
+If you want to add a specific uni, run `/domains students.university.edu.au`, replacing the domain as necessary.
+
+Some common unis you might want are listed below:
+
+| University | Students                       | Staff                | Clubs Management   |
+|------------|--------------------------------|----------------------|--------------------|
+| USYD       | uni.sydney.edu.au              | sydney.edu.au        | usu.edu.au         |
+| UTS        | student.uts.edu.au             | uts.edu.au           | activateuts.com.au |
+| WSU        | student .westernsydney. edu.au | westernsydney.edu.au | ???                |
+| MQ         | students.mq.edu.au             | mq.edu.au            | Same as staff      |
+
+If you want to allow anyone (including members of the general public) to join, run `/domains *.*`.
+
 ### I need help with some other task
 
 If `/help` doesn't give you the information you need, DM me on Discord.
@@ -111,3 +126,6 @@ If `/help` doesn't give you the information you need, DM me on Discord.
 If you want to fund this project, [support the upstream maintainer instead](https://patreon.com/emailbotdiscord), as I rely on his code to keep this bot running. I promise I don't need or want your money.
 
 If you want to give it to me anyway, I instead ask that you [make a contribution to the independent student paper Noise](https://noiseatunsw.com/donate), which I've spent a significant amount of effort writing both code and articles for.
+
+---
+[Legal](/legal) [Technical](/technical) [Contributors](/contributing)
