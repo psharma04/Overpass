@@ -79,3 +79,7 @@ When the bot gets removed from the server all the data is removed automatically.
 #### User
 
 The user can remove their own data by using `/delete_user_data`
+
+## Warranty
+
+No warranty (whether express or implied) or support is provided by the developers of this code, except on a voluntary basis. No expectation of performance, except of the nature described in the technical documentation, should be expected.

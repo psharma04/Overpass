@@ -8,6 +8,10 @@
 
 ---
 
+NOTE:
+The bot may be slower than usual to send out emails due to O-week. This is expected behaviour.
+Emails may be flagged as spam by UNSW due to the volume being sent during O-week. This is not expected behaviour. Please ask new registrants to mark the emails as not spam.
+
 ## What is this?
 
 Overpass is a Discord bot designed to verify that a student is who they say they are. It relies on some simple principles:
@@ -15,7 +19,7 @@ Overpass is a Discord bot designed to verify that a student is who they say they
 1. A student's zID is unique,
 2. The person who owns a specific zID also has access to the email `zID@ad.unsw.edu.au`,
 3. No-one else has access to that zID's email inbox,
-4. You don't (and shouldn't) trust strangers with your password.
+4. **You don't (and shouldn't) trust strangers with your password.**
 
 ## How does it work?
 
@@ -36,9 +40,11 @@ Overpass is a Discord bot designed to verify that a student is who they say they
 
 Unfortunately, Drawbridge is currently closed-source, meaning no-one can actually verify that your password isn't being stored by the operators. Additionally, your password is sent in plaintext to the server. I've written a more technical explanation of Why That's Bad (ironically, based on stuff I learned in a CSE course) further down the page for those who are more technically inclined.
 
-Even if you don't trust me, the worst case is that I know your zID and what UNSW discord servers you've joined. Unlike Drawbridge, Overpass never has a risk of giving me, server admins, the bot or any webpage your password, making it (at least to me) significantly safer to use. However, it still successfully performs the task of logging a student's zID for the admins of a discord server, which is the entire purpose of both bots.
+Even if you don't trust me, the worst case is that I know your zID and what UNSW Discord servers you've joined. Unlike Drawbridge, Overpass never has a risk of giving me, server admins, the bot or any webpage your password, making it (at least to me) significantly safer to use. However, it still successfully performs the task of logging a student's zID for the admins of a discord server, which is the entire purpose of both bots.
 
 Additionally, a student wanting to remove their data is as simple as asking the server admins to run the `/delete_user_data` command for their Discord username.
+
+If you're extra paranoid, you might think that I'm running a different version of the code on the actual bot than what's published on Github. Even in that case though, you can still just... run it yourself from the public repository. It's not that difficult, if you've learned enough about cybersecurity to consider that as a threat model, you definitely know how to self-host a NodeJS project.
 
 ## I'm a server admin. How do I set it up?
 
@@ -90,7 +96,7 @@ All you need to do is find their discord username in `#verification-logs` and de
 
 ### I need to ban a zID from my server
 
-Run `/blacklist zID@unsw.edu.au, zID@ad.unsw.edu.au`. 
+Run `/blacklist zID@unsw.edu.au, zID@ad.unsw.edu.au`.
 
 ### I want to add/remove a domain
 
@@ -119,7 +125,7 @@ If you want to allow anyone (including members of the general public) to join, r
 
 ### I need help with some other task
 
-If `/help` doesn't give you the information you need, DM me on Discord.
+If `/help` doesn't give you the information you need, DM me on Discord. Note that I'm only specifically testing this code for UNSW (since that's the only place where I have an email and student number). If you go to another uni, there may be a limit to how much I can help you.
 
 ### I want to give you money
 
