@@ -1,5 +1,5 @@
-site_name: EmailVerify for Discord
-repo_url: https://github.com/lkaesberg/EmailVerify
+site_name: Overpass for UNSW
+repo_url: https://github.com/psharma04/Overpass
 theme:
   name: material
   icon:
@@ -16,6 +16,14 @@ nav:
   - 'index.md'
   - 'commands.md'
   - 'contributing.md'
-  - Statistics: https://EmailBot.srtf.dev
   - 'legal.md'
   - Patreon: https://www.patreon.com/emailbotdiscord
+markdown_extensions:
+  - nl2br
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - callouts

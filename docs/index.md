@@ -8,9 +8,9 @@
 
 ---
 
-NOTE:
-The bot may be slower than usual to send out emails due to O-week. This is expected behaviour.
-Emails may be flagged as spam by UNSW due to the volume being sent during O-week. This is not expected behaviour. Please ask new registrants to mark the emails as not spam.
+!!! info "O Week 2025"
+   The bot may be slower than usual to send out emails due to O-week. This is expected behaviour.
+   Emails may be flagged as spam by UNSW due to the volume being sent during O-week. This is not expected behaviour. Please ask new registrants to mark the emails as not spam.
 
 ## What is this?
 
