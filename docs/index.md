@@ -8,9 +8,9 @@
 
 ---
 
-The bot may be slower than usual to send out emails due to O-week. This is expected behaviour.
+**Emails may be flagged as spam by UNSW. This is not expected behaviour. Please ask new registrants to mark the emails as not spam.**
 
-Emails may be flagged as spam by UNSW due to the volume being sent during O-week. This is **not** expected behaviour. Please ask new registrants to mark the emails as not spam.
+**Emails will only ever come from verify@overpass.unsw.bot as of July 22nd 2025. The old email server is now offline and will not send emails.**
 
 ## What is this?
 
