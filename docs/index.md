@@ -14,7 +14,7 @@
 
 ## What is this?
 
-Overpass is a Discord bot designed to verify that a student is who they say they are. It relies on some simple principles:
+Overpass is an [Arc-approved](/arc-approved.png) Discord bot designed to verify that a student is who they say they are. It relies on some simple principles:
 
 1. A student's zID is unique,
 2. The person who owns a specific zID also has access to the email `zID@ad.unsw.edu.au`,
