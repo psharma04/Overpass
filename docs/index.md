@@ -118,7 +118,7 @@ Some common unis you might want are listed below:
 |------------|--------------------------------|----------------------|--------------------|
 | USYD       | uni.sydney.edu.au              | sydney.edu.au        | usu.edu.au         |
 | UTS        | student.uts.edu.au             | uts.edu.au           | activateuts.com.au |
-| WSU        | student .westernsydney. edu.au | westernsydney.edu.au | ???                |
+| WSU        | student.westernsydney.edu.au   | westernsydney.edu.au | ???                |
 | MQ         | students.mq.edu.au             | mq.edu.au            | Same as staff      |
 
 If you want to allow anyone (including members of the general public) to join, run `/domains *.*`.
