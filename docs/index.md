@@ -10,7 +10,7 @@
 
 **Emails may be flagged as spam by UNSW. This is not expected behaviour. Please ask new registrants to mark the emails as not spam.**
 
-**Emails will only ever come from verify@overpass.unsw.bot as of July 22nd 2025. The old email server is now offline and will not send emails.**
+**Emails will only ever come from overpass@automailer.unsw.bot as of July 28nd 2025. The old email account is now disabled and will not send emails.**
 
 ## What is this?
 
@@ -67,7 +67,7 @@ Here's some basically copy-paste instructions. I've assumed you're familiar with
 | [For UNSW staff-run servers or any other case where Arc wouldn't need access]`/domains unsw.edu.au,ad.unsw.edu.au` | "Added @unsw.edu.au,@ad.unsw.edu.au"                  | MAKE SURE THIS IS EXACTLY THE SAME AND THAT BOTH DOMAINS ARE INCLUDED IN THE BOT'S REPLY. **DO NOT ADD** `student.unsw.edu.au` |
 | [For clubs/servers where Arc staff need access]`/domains unsw.edu.au,ad.unsw.edu.au,arc.unsw.edu.au` | "Added @unsw.edu.au,@arc.unsw.edu.au,@ad.unsw.edu.au" | MAKE SURE THIS IS EXACTLY THE SAME AND THAT ALL 3 DOMAINS ARE INCLUDED. **DO NOT ADD** `student.unsw.edu.au` |
 | `/set_log_channel #registration-logs`                        | "Modified log channel"                                | Substitute `#registration-logs` for your zID log channel. MAKE SURE THIS IS ONLY ACCESSIBLE TO MODERATORS. |
-| `/verifymessage This Discord server is operated by <SOCIETY>. By registering, you agree to comply with the server's rules, as well as the UNSW Code of Conduct. Please enter your UNSW email address (usually z1234567@ad.unsw.edu.au). You will get a 6 digit code emailed to your UNSW email within the next few minutes, please send that code as a DM reply to this bot.` | "Modified verify message"                             | Add any legal text you need to the message, and replace `<SOCIETY>` with whatever group is responsible for the server. |
+| `/verifymessage This Discord server is operated by <SOCIETY>. By registering, you agree to comply with the server's rules, as well as the UNSW Code of Conduct. Please enter your UNSW email address (usually z1234567@ad.unsw.edu.au). You will get a 6 digit code emailed to your UNSW email within the next few minutes, please send that code as a DM reply to this bot. **If you do not see the email, please check your spam folder.**` | "Modified verify message"                             | Add any legal text you need to the message, and replace `<SOCIETY>` with whatever group is responsible for the server. |
 
 6. Copy-paste your server rules into `#verify`.
 7. Make sure only moderators have the "Send Messages" Permission for `#verify`.
