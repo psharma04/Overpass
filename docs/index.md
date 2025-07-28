@@ -10,7 +10,7 @@
 
 **Emails may be flagged as spam by UNSW. This is not expected behaviour. Please ask new registrants to mark the emails as not spam.**
 
-**Emails will only ever come from overpass@automailer.unsw.bot as of July 28nd 2025. The old email account is now disabled and will not send emails.**
+**Emails will only ever come from overpass@automailer.unsw.bot as of July 28th 2025. The old email account is now disabled and will not send emails.**
 
 ## What is this?
 
