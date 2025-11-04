@@ -1,4 +1,4 @@
-# Overpass for UNSW
+# Overpass
 
 > A simple Discord verification bot that doesn't involve trusting strangers with your password.
 ---
@@ -8,7 +8,7 @@
 
 ---
 
-**Emails may be flagged as spam by UNSW. This is not expected behaviour. Please ask new registrants to mark the emails as not spam.**
+**Emails may be flagged as spam by your Uni. This is not expected behaviour. Please ask new registrants to mark the emails as not spam.**
 
 **Emails will only ever come from overpass@automailer.unsw.bot as of July 28th 2025. The old email account is now disabled and will not send emails.**
 
@@ -16,9 +16,9 @@
 
 Overpass is an [Arc-approved](/arc-approved.png) Discord bot designed to verify that a student is who they say they are. It relies on some simple principles:
 
-1. A student's zID is unique,
-2. The person who owns a specific zID also has access to the email `zID@ad.unsw.edu.au`,
-3. No-one else has access to that zID's email inbox,
+1. A student ID number is unique,
+2. The person who owns a specific ID number also has access to the email tied to that number,
+3. No-one else has access to that ID's email inbox,
 4. **You don't (and shouldn't) trust strangers with your password.**
 
 ## How does it work?
@@ -27,12 +27,12 @@ Overpass is an [Arc-approved](/arc-approved.png) Discord bot designed to verify 
 2. Someone joins the server
 3. The bot assigns them an "Unverified" role, stopping them from accessing anything but the `#verify` channel
 4. They click the button in the channel and receive a DM from the bot
-5. They give the bot their UNSW email (either zID@ad.unsw.edu.au)
+5. They give the bot their student email (e.g. zID@ad.unsw.edu.au)
 6. The bot sends them an email with a 6 digit code
 7. They reply to the bot with the code from their email
 8. The bot assigns them a "Verified" role in the discord server, and posts their zID in a channel that's only accessible to the server admins.
 
-## What makes this different from Drawbridge?
+## [FOR UNSW PEOPLE] What makes this different from Drawbridge?
 
 [Drawbridge](https://web.cse.unsw.edu.au/~apps/discord/) is the Arc-approved version of this bot, developed by Tom (a former CSESoc exec/CSE Course Convenor) and maintained by Dylan from CSE. However, I consider Drawbridge to have a major design flaw:
 
@@ -66,6 +66,7 @@ Here's some basically copy-paste instructions. I've assumed you're familiar with
 | `/add_unverified_on_join True`                               | "Enabled auto add unverified role!"                   |                                                              |
 | [For UNSW staff-run servers or any other case where Arc wouldn't need access]`/domains unsw.edu.au,ad.unsw.edu.au` | "Added @unsw.edu.au,@ad.unsw.edu.au"                  | MAKE SURE THIS IS EXACTLY THE SAME AND THAT BOTH DOMAINS ARE INCLUDED IN THE BOT'S REPLY. **DO NOT ADD** `student.unsw.edu.au` |
 | [For clubs/servers where Arc staff need access]`/domains unsw.edu.au,ad.unsw.edu.au,arc.unsw.edu.au` | "Added @unsw.edu.au,@arc.unsw.edu.au,@ad.unsw.edu.au" | MAKE SURE THIS IS EXACTLY THE SAME AND THAT ALL 3 DOMAINS ARE INCLUDED. **DO NOT ADD** `student.unsw.edu.au` |
+| [For non-UNSW servers] `/domains [domains]` (refer to the table in the FAQ). | "Added `@domain`"                                     | MAKE SURE THIS IS EXACTLY THE SAME AS WHAT YOU EXPECT.       |
 | `/set_log_channel #registration-logs`                        | "Modified log channel"                                | Substitute `#registration-logs` for your zID log channel. MAKE SURE THIS IS ONLY ACCESSIBLE TO MODERATORS. |
 | `/verifymessage This Discord server is operated by <SOCIETY>. By registering, you agree to comply with the server's rules, as well as the UNSW Code of Conduct. Please enter your UNSW email address (usually z1234567@ad.unsw.edu.au). You will get a 6 digit code emailed to your UNSW email within the next few minutes, please send that code as a DM reply to this bot. **If you do not see the email, please check your spam folder.**` | "Modified verify message"                             | Add any legal text you need to the message, and replace `<SOCIETY>` with whatever group is responsible for the server. |
 
