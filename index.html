@@ -1,0 +1,1010 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="commands/">
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/psharma04/Overpass/main/images/emailbot.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Overpass for UNSW</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="yellow">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overpass" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Overpass for UNSW" class="md-header__button md-logo" aria-label="Overpass for UNSW" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/psharma04/Overpass/main/images/emailbot-border.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Overpass for UNSW
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overpass
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/psharma04/Overpass" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overpass
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="commands/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commands
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="contributing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contributors
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="legal/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Legal
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://www.patreon.com/emailbotdiscord" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Patreon
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Overpass for UNSW" class="md-nav__button md-logo" aria-label="Overpass for UNSW" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/psharma04/Overpass/main/images/emailbot-border.png" alt="logo">
+
+    </a>
+    Overpass for UNSW
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/psharma04/Overpass" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Overpass
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overpass
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-simple-discord-verification-bot-that-doesnt-involve-trusting-strangers-with-your-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      &gt; A simple Discord verification bot that doesn't involve trusting strangers with your password.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is this?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does it work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-unsw-people-what-makes-this-different-from-drawbridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FOR UNSW PEOPLE] What makes this different from Drawbridge?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#im-a-server-admin-how-do-i-set-it-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      I'm a server admin. How do I set it up?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-need-to-remove-a-students-data-from-my-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      I need to remove a student's data from my server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-need-to-ban-a-zid-from-my-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      I need to ban a zID from my server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-addremove-a-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to add/remove a domain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-remove-the-bot-entirely" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to remove the bot entirely
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-allow-non-unsw-students-to-access-my-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to allow non-UNSW students to access my server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-need-help-with-some-other-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      I need help with some other task
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-give-you-money" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to give you money
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="legal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Legal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.patreon.com/emailbotdiscord" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Patreon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-simple-discord-verification-bot-that-doesnt-involve-trusting-strangers-with-your-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      &gt; A simple Discord verification bot that doesn't involve trusting strangers with your password.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is this?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does it work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-unsw-people-what-makes-this-different-from-drawbridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      [FOR UNSW PEOPLE] What makes this different from Drawbridge?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#im-a-server-admin-how-do-i-set-it-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      I'm a server admin. How do I set it up?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-need-to-remove-a-students-data-from-my-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      I need to remove a student's data from my server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-need-to-ban-a-zid-from-my-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      I need to ban a zID from my server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-addremove-a-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to add/remove a domain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-remove-the-bot-entirely" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to remove the bot entirely
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-allow-non-unsw-students-to-access-my-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to allow non-UNSW students to access my server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-need-help-with-some-other-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      I need help with some other task
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-give-you-money" class="md-nav__link">
+    <span class="md-ellipsis">
+      I want to give you money
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="overpass">Overpass</h1>
+<h2 id="a-simple-discord-verification-bot-that-doesnt-involve-trusting-strangers-with-your-password">&gt; A simple Discord verification bot that doesn't involve trusting strangers with your password.</h2>
+<ul>
+<li>TOC
+{:toc}</li>
+</ul>
+<hr />
+<p><strong>Emails may be flagged as spam by your Uni. This is not expected behaviour. Please ask new registrants to mark the emails as not spam.</strong></p>
+<p><strong>Emails will only ever come from overpass@automailer.unsw.bot as of July 28th 2025. The old email account is now disabled and will not send emails.</strong></p>
+<h2 id="what-is-this">What is this?</h2>
+<p>Overpass is an <a href="/arc-approved.png">Arc-approved</a> Discord bot designed to verify that a student is who they say they are. It relies on some simple principles:</p>
+<ol>
+<li>A student ID number is unique,</li>
+<li>The person who owns a specific ID number also has access to the email tied to that number,</li>
+<li>No-one else has access to that ID's email inbox,</li>
+<li><strong>You don't (and shouldn't) trust strangers with your password.</strong></li>
+</ol>
+<h2 id="how-does-it-work">How does it work?</h2>
+<ol>
+<li>A server admin (usually a society exec or course convenor) sets up the bot in their server</li>
+<li>Someone joins the server</li>
+<li>The bot assigns them an "Unverified" role, stopping them from accessing anything but the <code>#verify</code> channel</li>
+<li>They click the button in the channel and receive a DM from the bot</li>
+<li>They give the bot their student email (e.g. zID@ad.unsw.edu.au)</li>
+<li>The bot sends them an email with a 6 digit code</li>
+<li>They reply to the bot with the code from their email</li>
+<li>The bot assigns them a "Verified" role in the discord server, and posts their zID in a channel that's only accessible to the server admins.</li>
+</ol>
+<h2 id="for-unsw-people-what-makes-this-different-from-drawbridge">[FOR UNSW PEOPLE] What makes this different from Drawbridge?</h2>
+<p><a href="https://web.cse.unsw.edu.au/~apps/discord/">Drawbridge</a> is the Arc-approved version of this bot, developed by Tom (a former CSESoc exec/CSE Course Convenor) and maintained by Dylan from CSE. However, I consider Drawbridge to have a major design flaw:</p>
+<blockquote>
+<p>"Your zPass will not be stored. I don't want your zPass, I like my own one."</p>
+</blockquote>
+<p>Unfortunately, Drawbridge is currently closed-source, meaning no-one can actually verify that your password isn't being stored by the operators. Additionally, your password is sent in plaintext to the server. I've written a more technical explanation of Why That's Bad (ironically, based on stuff I learned in a CSE course) further down the page for those who are more technically inclined.</p>
+<p>Even if you don't trust me, the worst case is that I know your zID and what UNSW Discord servers you've joined. Unlike Drawbridge, Overpass never has a risk of giving me, server admins, the bot or any webpage your password, making it (at least to me) significantly safer to use. However, it still successfully performs the task of logging a student's zID for the admins of a discord server, which is the entire purpose of both bots.</p>
+<p>Additionally, a student wanting to remove their data is as simple as asking the server admins to run the <code>/delete_user_data</code> command for their Discord username.</p>
+<p>If you're extra paranoid, you might think that I'm running a different version of the code on the actual bot than what's published on Github. Even in that case though, you can still just... run it yourself from the public repository. It's not that difficult, if you've learned enough about cybersecurity to consider that as a threat model, you definitely know how to self-host a NodeJS project.</p>
+<h2 id="im-a-server-admin-how-do-i-set-it-up">I'm a server admin. How do I set it up?</h2>
+<p>Here's some basically copy-paste instructions. I've assumed you're familiar with the basics of setting up a Discord server, but if you're having trouble, feel free to send me a <a href="https://discord.com/channels/@me/336292647427637249">DM on Discord</a>.</p>
+<ol>
+<li>Create 2 new channels on your server - I'd recommend calling them <code>#verify</code> and <code>#registration-logs</code> or similar.</li>
+<li>Create 2 new roles - I'd call them <code>Verified</code> and <code>Unverified</code>.</li>
+<li>Set the permissions for the roles as follows:</li>
+<li><code>Unverified</code> should have all permissions disabled for every channel except <code>#verify</code></li>
+<li><code>Verified</code> should have all permissions disabled for the channel <code>#verify</code></li>
+<li><code>#registration-logs</code> should be set up to only be visible to moderators. You can use the "Private Channels" function for this.</li>
+<li><a href="https://discord.com/oauth2/authorize?client_id=1031151331190263848&amp;permissions=268504128&amp;scope=bot%20applications.commands">Invite the bot</a> to your server.</li>
+<li>Run all of the following commands:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Command (I would copy-paste this)</th>
+<th>Expected response from the bot</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/unverifiedrole @Unverified</code></td>
+<td>"Unverified role changed to unverified"</td>
+<td>Substitute <code>@Unverified</code> for your Unverified user role</td>
+</tr>
+<tr>
+<td><code>/verifiedrole @Verified</code></td>
+<td>"Verified role changed to verified"</td>
+<td>Substitute <code>@Verified</code> for your Verified user role</td>
+</tr>
+<tr>
+<td><code>/add_unverified_on_join True</code></td>
+<td>"Enabled auto add unverified role!"</td>
+<td></td>
+</tr>
+<tr>
+<td>[For UNSW staff-run servers or any other case where Arc wouldn't need access]<code>/domains unsw.edu.au,ad.unsw.edu.au</code></td>
+<td>"Added @unsw.edu.au,@ad.unsw.edu.au"</td>
+<td>MAKE SURE THIS IS EXACTLY THE SAME AND THAT BOTH DOMAINS ARE INCLUDED IN THE BOT'S REPLY. <strong>DO NOT ADD</strong> <code>student.unsw.edu.au</code></td>
+</tr>
+<tr>
+<td>[For clubs/servers where Arc staff need access]<code>/domains unsw.edu.au,ad.unsw.edu.au,arc.unsw.edu.au</code></td>
+<td>"Added @unsw.edu.au,@arc.unsw.edu.au,@ad.unsw.edu.au"</td>
+<td>MAKE SURE THIS IS EXACTLY THE SAME AND THAT ALL 3 DOMAINS ARE INCLUDED. <strong>DO NOT ADD</strong> <code>student.unsw.edu.au</code></td>
+</tr>
+<tr>
+<td>[For non-UNSW servers] <code>/domains [domains]</code> (refer to the table in the FAQ).</td>
+<td>"Added <code>@domain</code>"</td>
+<td>MAKE SURE THIS IS EXACTLY THE SAME AS WHAT YOU EXPECT.</td>
+</tr>
+<tr>
+<td><code>/set_log_channel #registration-logs</code></td>
+<td>"Modified log channel"</td>
+<td>Substitute <code>#registration-logs</code> for your zID log channel. MAKE SURE THIS IS ONLY ACCESSIBLE TO MODERATORS.</td>
+</tr>
+<tr>
+<td><code>/verifymessage This Discord server is operated by &lt;SOCIETY&gt;. By registering, you agree to comply with the server's rules, as well as the UNSW Code of Conduct. Please enter your UNSW email address (usually z1234567@ad.unsw.edu.au). You will get a 6 digit code emailed to your UNSW email within the next few minutes, please send that code as a DM reply to this bot. **If you do not see the email, please check your spam folder.**</code></td>
+<td>"Modified verify message"</td>
+<td>Add any legal text you need to the message, and replace <code>&lt;SOCIETY&gt;</code> with whatever group is responsible for the server.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Copy-paste your server rules into <code>#verify</code>.</li>
+<li>Make sure only moderators have the "Send Messages" Permission for <code>#verify</code>.</li>
+<li>Run the <code>/button</code> command with the parameters below:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Button Text</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#verify</code></td>
+<td>Click here to verify</td>
+<td>This bot will verify your zID. Go to https://overpass.unsw.bot for more information on how it works.</td>
+</tr>
+</tbody>
+</table>
+<p>​       It should respond "Button created", and you should see the following message in the <code>#verify</code> channel:</p>
+<p><img alt="CleanShot 2024-05-29 at 22.26.06@2x" src="https://raw.githubusercontent.com/psharma04/Overpass/main/images/example-button.png" /></p>
+<ol>
+<li>Run <code>/status</code> to confirm that you've set the bot up properly. If there are any unexpected differences from the following screenshot, you might have dome something wrong.</li>
+</ol>
+<p><img alt="" src="https://raw.githubusercontent.com/psharma04/Overpass/main/images/expected-config.png" /></p>
+<ol>
+<li>[OPTIONAL] Run <code>/verify</code> and verify yourself to test that it works with your account before sharing the server with students/members.</li>
+<li>Done! You should be good to share the server with new members and have them verify when they join.</li>
+</ol>
+<h2 id="common-tasks">Common tasks</h2>
+<h3 id="i-need-to-remove-a-students-data-from-my-server">I need to remove a student's data from my server</h3>
+<p>All you need to do is find their discord username in <code>#verification-logs</code> and delete the corresponding message from the bot!</p>
+<h3 id="i-need-to-ban-a-zid-from-my-server">I need to ban a zID from my server</h3>
+<p>Run <code>/blacklist zID@unsw.edu.au, zID@ad.unsw.edu.au</code>.</p>
+<h3 id="i-want-to-addremove-a-domain">I want to add/remove a domain</h3>
+<p>Simply run <code>/domains domain.tld</code> for each new domain, or <code>/removedomains domain.tld</code> for each domain you want to remove.</p>
+<p>I'd recommend running <code>/domains</code> after either of those commands to make sure the new list is correct for your server.</p>
+<h3 id="i-want-to-remove-the-bot-entirely">I want to remove the bot entirely</h3>
+<p>Run <code>/delete_server_data</code>. The bot will nuke itself and disconnect from your server (you'll have to do all the setup again if you want to re-add it).</p>
+<h3 id="i-want-to-allow-non-unsw-students-to-access-my-server">I want to allow non-UNSW students to access my server</h3>
+<p>If you want to add a specific uni, run <code>/domains students.university.edu.au</code>, replacing the domain as necessary.</p>
+<p>Some common unis you might want are listed below:</p>
+<table>
+<thead>
+<tr>
+<th>University</th>
+<th>Students</th>
+<th>Staff</th>
+<th>Clubs Management</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USYD</td>
+<td>uni.sydney.edu.au</td>
+<td>sydney.edu.au</td>
+<td>usu.edu.au</td>
+</tr>
+<tr>
+<td>UTS</td>
+<td>student.uts.edu.au</td>
+<td>uts.edu.au</td>
+<td>activateuts.com.au</td>
+</tr>
+<tr>
+<td>WSU</td>
+<td>student.westernsydney.edu.au</td>
+<td>westernsydney.edu.au</td>
+<td>???</td>
+</tr>
+<tr>
+<td>MQ</td>
+<td>students.mq.edu.au</td>
+<td>mq.edu.au</td>
+<td>Same as staff</td>
+</tr>
+</tbody>
+</table>
+<p>If you want to allow anyone (including members of the general public) to join, run <code>/domains *.*</code>.</p>
+<h3 id="i-need-help-with-some-other-task">I need help with some other task</h3>
+<p>If <code>/help</code> doesn't give you the information you need, DM me on Discord. Note that I'm only specifically testing this code for UNSW (since that's the only place where I have an email and student number). If you go to another uni, there may be a limit to how much I can help you.</p>
+<h3 id="i-want-to-give-you-money">I want to give you money</h3>
+<p>If you want to fund this project, <a href="https://patreon.com/emailbotdiscord">support the upstream maintainer instead</a>, as I rely on his code to keep this bot running. I promise I don't need or want your money.</p>
+<p>If you want to give it to me anyway, I instead ask that you <a href="https://noiseatunsw.com/donate">make a contribution to the independent student paper Noise</a>, which I've spent a significant amount of effort writing both code and articles for.</p>
+<hr />
+<p><a href="/legal">Legal</a> <a href="/technical">Technical</a> <a href="/contributing">Contributors</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
